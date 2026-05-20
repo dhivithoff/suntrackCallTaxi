@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Hero from "../components/Hero";
 import FleetCard from "../components/FleetCard";
 import FareCalculator from "../components/FareCalculator";
@@ -13,22 +13,24 @@ import { fleet } from "../data/fleet";
 import { routes } from "../data/routes";
 import { ShieldCheck, Clock, ThumbsUp, CreditCard } from "lucide-react";
 
+const CUBIC_BEZIER: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 // Reusable stagger container
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: CUBIC_BEZIER } },
 };
-const fadeLeft = {
+const fadeLeft: Variants = {
   hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: CUBIC_BEZIER } },
 };
-const fadeRight = {
+const fadeRight: Variants = {
   hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: CUBIC_BEZIER } },
 };
 
 export default function Home() {
