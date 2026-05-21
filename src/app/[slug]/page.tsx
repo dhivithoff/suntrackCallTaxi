@@ -89,10 +89,10 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
       />
       
       {/* Route Hero */}
-      <section className="bg-[var(--premium-dark)] pt-36 pb-20 border-b-4 border-[var(--accent)] relative overflow-hidden">
+      <section className="bg-[var(--premium-dark)] pt-36 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--premium-dark)] via-slate-700 to-slate-800" />
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-bold tracking-[0.15em] uppercase mb-5">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--accent)]/15 border border-[var(--accent)]/40 text-[var(--accent)] text-xs font-bold tracking-[0.15em] uppercase mb-5 shadow-sm">
             Route Details
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-5 text-white">
@@ -103,31 +103,45 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
           </p>
         </div>
       </section>
-
+      
       {/* Route Overview */}
-      <section className="py-0 bg-[var(--premium-dark)] border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-700">
+      <section className="py-8 bg-[#0D1B3E] border-t-[4px] border-b-[4px] border-[var(--accent)] relative z-10 shadow-md">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-800">
           <div className="p-6 text-center">
-            <p className="text-slate-400 text-xs uppercase tracking-wider mb-1">Distance</p>
-            <p className="text-3xl font-bold text-white">{route.distanceKm} <span className="text-lg font-medium text-slate-300">km</span></p>
+            <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Distance</p>
+            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">
+              {route.distanceKm}
+              <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-1">km</span>
+            </p>
           </div>
           <div className="p-6 text-center">
-            <p className="text-slate-400 text-xs uppercase tracking-wider mb-1">Travel Time</p>
-            <p className="text-3xl font-bold text-white">{route.travelTimeHours}h <span className="text-lg font-medium text-slate-300">{route.travelTimeMinutes ? `${route.travelTimeMinutes}m` : ""}</span></p>
+            <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Travel Time</p>
+            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">
+              {route.travelTimeHours}
+              <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-0.5">h</span>
+              {route.travelTimeMinutes ? (
+                <span className="ml-1.5">
+                  {route.travelTimeMinutes}
+                  <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-0.5">m</span>
+                </span>
+              ) : (
+                ""
+              )}
+            </p>
           </div>
           <div className="p-6 text-center">
-            <p className="text-slate-400 text-xs uppercase tracking-wider mb-1">Starting Fare</p>
-            <p className="text-3xl font-bold text-[var(--accent)]">₹{route.baseFare}</p>
+            <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Starting Fare</p>
+            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">₹{route.baseFare}</p>
           </div>
           <div className="p-6 text-center">
-            <p className="text-slate-400 text-xs uppercase tracking-wider mb-1">Availability</p>
-            <p className="text-3xl font-bold text-green-400">24/7</p>
+            <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Availability</p>
+            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">24/7</p>
           </div>
         </div>
       </section>
 
       {/* Available Vehicles for this route */}
-      <section className="py-24 max-w-7xl mx-auto px-6">
+      <section className="pt-16 pb-24 max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center">Available <span className="text-[var(--accent)]">Vehicles</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {fleet.map(vehicle => (
@@ -182,6 +196,35 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
           </div>
         </div>
       </section>
+
+      {/* Bottom Sticky CTA Bar for immediate conversion */}
+      <div className="fixed bottom-0 left-0 w-full bg-slate-950/85 backdrop-blur-md border-t border-slate-800/80 py-4 px-6 z-40 shadow-lg shadow-black/40">
+        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col text-left w-full sm:w-auto">
+            <span className="text-[11px] text-slate-400 font-bold uppercase tracking-widest">Tirupur to {route.destination}</span>
+            <span className="text-lg font-extrabold text-[var(--accent)]">Starting from ₹{route.baseFare}</span>
+          </div>
+          <div className="flex gap-3 w-full sm:w-auto justify-end">
+            <a
+              href={`https://wa.me/919876543210?text=I want to book a cab from Tirupur to ${route.destination}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-none flex items-center justify-center space-x-2 bg-[var(--accent)] text-slate-900 px-6 py-3 rounded-xl font-bold text-[14px] hover:brightness-110 transition-all shadow-md shadow-[var(--accent)]/20 active:scale-[0.98]"
+            >
+              <span>Book on WhatsApp</span>
+            </a>
+            <a
+              href="tel:+919876543210"
+              className="flex-1 sm:flex-none flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white px-6 py-3 rounded-xl font-bold text-[14px] transition-colors active:scale-[0.98]"
+            >
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Spacer to prevent page bottom content from being cut off by the sticky bar */}
+      <div className="h-20 bg-white" />
     </>
   );
 }
