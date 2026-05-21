@@ -89,16 +89,15 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
       />
       
       {/* Route Hero */}
-      <section className="bg-[var(--premium-dark)] pt-36 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--premium-dark)] via-slate-700 to-slate-800" />
+      <section className="bg-white pt-36 pb-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--accent)]/15 border border-[var(--accent)]/40 text-[var(--accent)] text-xs font-bold tracking-[0.15em] uppercase mb-5 shadow-sm">
             Route Details
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-5 text-slate-900">
             Cab from Tirupur to <span className="text-[var(--accent)]">{route.destination}</span>
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Book a premium, safe, and reliable taxi from Tirupur to {route.destination}. We offer one-way drops, round trips, and airport transfers.
           </p>
         </div>
@@ -197,34 +196,6 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
-      {/* Bottom Sticky CTA Bar for immediate conversion */}
-      <div className="fixed bottom-0 left-0 w-full bg-slate-950/85 backdrop-blur-md border-t border-slate-800/80 py-4 px-6 z-40 shadow-lg shadow-black/40">
-        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex flex-col text-left w-full sm:w-auto">
-            <span className="text-[11px] text-slate-400 font-bold uppercase tracking-widest">Tirupur to {route.destination}</span>
-            <span className="text-lg font-extrabold text-[var(--accent)]">Starting from ₹{route.baseFare}</span>
-          </div>
-          <div className="flex gap-3 w-full sm:w-auto justify-end">
-            <a
-              href={`https://wa.me/919876543210?text=I want to book a cab from Tirupur to ${route.destination}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none flex items-center justify-center space-x-2 bg-[var(--accent)] text-slate-900 px-6 py-3 rounded-xl font-bold text-[14px] hover:brightness-110 transition-all shadow-md shadow-[var(--accent)]/20 active:scale-[0.98]"
-            >
-              <span>Book on WhatsApp</span>
-            </a>
-            <a
-              href="tel:+919876543210"
-              className="flex-1 sm:flex-none flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white px-6 py-3 rounded-xl font-bold text-[14px] transition-colors active:scale-[0.98]"
-            >
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Spacer to prevent page bottom content from being cut off by the sticky bar */}
-      <div className="h-20 bg-white" />
     </>
   );
 }

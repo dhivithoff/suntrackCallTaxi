@@ -22,8 +22,8 @@ export default function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[var(--premium-dark)] text-slate-100 shadow-lg shadow-slate-900/20 py-2.5 border-b border-slate-800" 
-          : "bg-white/80 text-slate-800 backdrop-blur-md py-4 border-b border-slate-100"
+          ? "bg-[var(--premium-dark)] text-slate-100 shadow-lg shadow-slate-900/20 py-1.5 border-b border-slate-800" 
+          : "bg-white/80 text-slate-800 backdrop-blur-md py-3 border-b border-slate-100"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -34,7 +34,7 @@ export default function Header() {
             width={180}
             height={56}
             className={`transition-all duration-300 w-auto object-contain ${
-              isScrolled ? "h-11 md:h-12" : "h-15 md:h-17"
+              isScrolled ? "h-8 md:h-[34px]" : "h-10 md:h-[46px]"
             }`}
             priority
           />
@@ -42,22 +42,22 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             Home
           </Link>
-          <Link href="/fleet" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/fleet" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             Fleet
           </Link>
-          <Link href="/pricing" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/pricing" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             Pricing
           </Link>
-          <Link href="/about" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/about" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             About
           </Link>
-          <Link href="/faq" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/faq" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             FAQ
           </Link>
-          <Link href="/contact" className="text-[15px] font-semibold hover:text-[var(--accent)] transition-colors">
+          <Link href="/contact" className="text-sm font-semibold hover:text-[var(--accent)] transition-colors">
             Contact
           </Link>
         </nav>
@@ -66,9 +66,9 @@ export default function Header() {
         <div className="hidden md:flex items-center">
           <a
             href="tel:+919876543210"
-            className="flex items-center space-x-2 bg-[var(--accent)] text-slate-900 px-5 py-2.5 rounded-xl font-bold hover:brightness-105 transition-all shadow-sm animate-pulse-subtle"
+            className="flex items-center space-x-2 bg-[var(--accent)] text-slate-900 px-4 py-2 rounded-xl font-bold text-sm hover:brightness-105 transition-all shadow-sm animate-pulse-subtle"
           >
-            <Phone size={18} />
+            <Phone size={15} />
             <span>Call Now</span>
           </a>
         </div>
@@ -79,7 +79,7 @@ export default function Header() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           suppressHydrationWarning
         >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
