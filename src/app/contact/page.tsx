@@ -36,9 +36,14 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-lg mb-1 text-slate-900">Call Us</h3>
                 <p className="text-[var(--muted)] mb-2 text-sm">Available 24/7 for instant bookings.</p>
-                <a href="tel:+919876543210" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
-                  +91 98765 43210
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+919962295259" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
+                    +91 99622 95259
+                  </a>
+                  <a href="tel:+917010360941" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
+                    +91 70103 60941
+                  </a>
+                </div>
               </div>
             </div>
             
@@ -49,9 +54,14 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-lg mb-1 text-slate-900">WhatsApp Us</h3>
                 <p className="text-[var(--muted)] mb-2 text-sm">Send us your requirements instantly.</p>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
-                  Chat on WhatsApp
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a href="https://wa.me/919962295259" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
+                    Chat with +91 99622 95259
+                  </a>
+                  <a href="https://wa.me/917010360941" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-slate-900 font-bold text-lg transition-colors">
+                    Chat with +91 70103 60941
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -62,9 +72,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-lg mb-1 text-slate-900">Location</h3>
                 <p className="text-[var(--muted)] text-sm leading-relaxed">
-                  Sun Track Taxi Service<br />
-                  Main Road, Tirupur<br />
-                  Tamil Nadu, India
+                  Ramasamy, 20/57,<br />
+                  Near Ration Kadai, Ram Nagar,<br />
+                  Ramamoorthy Nagar, Main Road,<br />
+                  Tirupur - 641602
                 </p>
               </div>
             </div>

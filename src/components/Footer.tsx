@@ -14,18 +14,30 @@ export default function Footer() {
           <p className="text-slate-300 text-sm leading-relaxed">
             Premium outstation taxi service from Tirupur. Safe, reliable, and transparent pricing for district-to-district travel.
           </p>
-          <div className="space-y-3">
-            <a href="tel:+919876543210" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
-              <Phone size={16} className="mr-3 text-[var(--accent)]" />
-              +91 98765 43210
-            </a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
-              <MessageCircle size={16} className="mr-3 text-[var(--accent)]" />
-              WhatsApp Us
-            </a>
-            <div className="flex items-center text-sm text-slate-300">
-              <MapPin size={16} className="mr-3 text-[var(--accent)]" />
-              Tirupur, Tamil Nadu
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <a href="tel:+919962295259" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
+                <Phone size={16} className="mr-3 text-[var(--accent)] flex-shrink-0" />
+                +91 99622 95259
+              </a>
+              <a href="tel:+917010360941" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
+                <Phone size={16} className="mr-3 text-[var(--accent)] flex-shrink-0" />
+                +91 70103 60941
+              </a>
+            </div>
+            <div className="space-y-2">
+              <a href="https://wa.me/919962295259" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
+                <MessageCircle size={16} className="mr-3 text-[var(--accent)] flex-shrink-0" />
+                WhatsApp: 99622 95259
+              </a>
+              <a href="https://wa.me/917010360941" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-slate-300 hover:text-[var(--accent)] transition-colors">
+                <MessageCircle size={16} className="mr-3 text-[var(--accent)] flex-shrink-0" />
+                WhatsApp: 70103 60941
+              </a>
+            </div>
+            <div className="flex items-start text-sm text-slate-300 pt-1">
+              <MapPin size={16} className="mr-3 text-[var(--accent)] flex-shrink-0 mt-0.5" />
+              <span>Ramasamy, 20/57, Ramamoorthy Nagar, Tirupur - 641602</span>
             </div>
           </div>
         </div>

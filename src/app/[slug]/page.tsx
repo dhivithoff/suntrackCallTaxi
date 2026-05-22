@@ -62,11 +62,13 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
         "@type": "LocalBusiness",
         "name": "Sun Track Taxi",
         "description": "Premium outstation taxi service from Tirupur.",
-        "telephone": "+919876543210",
+        "telephone": "+919962295259",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Ramasamy, 20/57, Near Ration Kadai, Ram Nagar, Ramamoorthy Nagar, Main Road",
           "addressLocality": "Tirupur",
           "addressRegion": "Tamil Nadu",
+          "postalCode": "641602",
           "addressCountry": "IN"
         }
       },
@@ -108,20 +110,20 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-800">
           <div className="p-6 text-center">
             <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Distance</p>
-            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--accent)] tracking-tight">
               {route.distanceKm}
-              <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-1">km</span>
+              <span className="text-base sm:text-lg font-bold text-[var(--accent)]/80 ml-0.5">km</span>
             </p>
           </div>
           <div className="p-6 text-center">
             <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Travel Time</p>
-            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--accent)] tracking-tight">
               {route.travelTimeHours}
-              <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-0.5">h</span>
+              <span className="text-base sm:text-lg font-bold text-[var(--accent)]/80 ml-0.5">h</span>
               {route.travelTimeMinutes ? (
                 <span className="ml-1.5">
                   {route.travelTimeMinutes}
-                  <span className="text-xl sm:text-2xl font-bold text-[var(--accent)]/80 ml-0.5">m</span>
+                  <span className="text-base sm:text-lg font-bold text-[var(--accent)]/80 ml-0.5">m</span>
                 </span>
               ) : (
                 ""
@@ -130,11 +132,11 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
           </div>
           <div className="p-6 text-center">
             <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Starting Fare</p>
-            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">₹{route.baseFare}</p>
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--accent)] tracking-tight">₹{route.baseFare}</p>
           </div>
           <div className="p-6 text-center">
             <p className="text-slate-400 text-xs uppercase tracking-[0.2em] font-bold mb-3">Availability</p>
-            <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-[var(--accent)] tracking-tight">24/7</p>
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--accent)] tracking-tight">24/7</p>
           </div>
         </div>
       </section>
@@ -159,7 +161,7 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a 
-                href={`https://wa.me/919876543210?text=I want to book a cab from Tirupur to ${route.destination}`}
+                href={`https://wa.me/919962295259?text=I want to book a cab from Tirupur to ${route.destination}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[var(--accent)] hover:brightness-110 text-slate-900 px-8 py-4 rounded-xl font-bold text-[15px] transition-all shadow-md shadow-[var(--accent)]/20"
@@ -167,7 +169,7 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
                 <span>WhatsApp Now</span>
               </a>
               <a 
-                href="tel:+919876543210"
+                href="tel:+919962295259"
                 className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-900 px-8 py-4 rounded-xl font-bold text-[15px] hover:bg-slate-50 transition-colors shadow-sm"
               >
                 <span>Call Us</span>

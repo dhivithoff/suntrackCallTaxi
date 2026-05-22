@@ -65,7 +65,7 @@ export default function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
           <a
-            href="tel:+919876543210"
+            href="tel:+919962295259"
             className="flex items-center space-x-2 bg-[var(--accent)] text-slate-900 px-4 py-2 rounded-xl font-bold text-sm hover:brightness-105 transition-all shadow-sm animate-pulse-subtle"
           >
             <Phone size={15} />
@@ -105,7 +105,7 @@ export default function Header() {
             Contact
           </Link>
           <a
-            href="tel:+919876543210"
+            href="tel:+919962295259"
             className="flex items-center justify-center space-x-2 bg-[var(--accent)] text-slate-900 px-5 py-3 rounded-xl font-bold mt-4 shadow-sm"
           >
             <Phone size={18} />

@@ -48,7 +48,7 @@ export default function FAQPage() {
               Contact Support
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919962295259"
               className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-xl px-8 py-4 transition-all"
             >
               <Phone size={18} />

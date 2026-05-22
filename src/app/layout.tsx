@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FloatingCTA from "../components/FloatingCTA";
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]" suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
+        <FloatingCTA />
         <Footer />
       </body>
     </html>

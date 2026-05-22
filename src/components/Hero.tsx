@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto mt-auto lg:mt-0 z-20 pb-4 lg:pb-0">
             <a 
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919962295259"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 lg:flex-none flex items-center justify-center space-x-2 bg-[var(--accent)] text-slate-900 px-8 py-4 rounded-xl font-bold text-[15px] hover:brightness-110 transition-all shadow-lg shadow-[var(--accent)]/20 hover:scale-[1.02] active:scale-[0.98]"
@@ -73,7 +73,7 @@ export default function Hero() {
               <span>Book on WhatsApp</span>
             </a>
             <a 
-              href="tel:+919876543210"
+              href="tel:+919962295259"
               className="flex-1 lg:flex-none flex items-center justify-center space-x-2 bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-[15px] hover:bg-slate-100 transition-colors shadow-md hover:scale-[1.02] active:scale-[0.98]"
             >
               <Phone size={18} className="text-[var(--accent)]" />

@@ -57,7 +57,7 @@ export default function FleetCard({ vehicle }: { vehicle: FleetVehicle }) {
         </div>
         
         <a 
-          href={`https://wa.me/919876543210?text=I want to book ${vehicle.name} from Tirupur`}
+          href={`https://wa.me/919962295259?text=I want to book ${vehicle.name} from Tirupur`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full flex items-center justify-center gap-2 bg-[var(--accent)] hover:brightness-110 text-slate-900 font-bold py-3.5 rounded-xl transition-all shadow-md shadow-[var(--accent)]/20 group-hover:shadow-lg group-hover:shadow-[var(--accent)]/30 text-[15px]"

@@ -68,7 +68,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919962295259"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[var(--accent)] hover:brightness-110 text-slate-900 font-bold px-6 py-3.5 rounded-xl transition-all shadow-md shadow-[var(--accent)]/20 text-sm"
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 Book Now
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919962295259"
                 className="flex items-center justify-center gap-2 bg-slate-50 border border-slate-200 hover:bg-white text-slate-900 font-bold px-6 py-3.5 rounded-xl transition-colors text-sm"
               >
                 <Phone size={16} className="text-[var(--accent)]" />

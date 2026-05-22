@@ -12,7 +12,7 @@ export interface FleetVehicle {
 export const fleet: FleetVehicle[] = [
   {
     id: "sedan",
-    name: "Sedan (Etios/Dzire)",
+    name: "Sedan (Swift/Etios)",
     image: "/images/front_sedan.png",
     passengers: 4,
     luggage: 2,
@@ -22,12 +22,12 @@ export const fleet: FleetVehicle[] = [
   },
   {
     id: "suv",
-    name: "SUV (Ertiga/Tavera)",
+    name: "SUV (Innova/Marazzo/Xylo)",
     image: "/images/front_suv.png",
     passengers: 6,
     luggage: 4,
-    pricePerKm: 18,
-    driverBata: 400,
+    pricePerKm: 19,
+    driverBata: 500,
     tollNote: "Toll & Parking extra",
   },
   {
